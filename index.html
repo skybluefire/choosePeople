@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta data-vue-meta="true" itemprop="description" name="description"
+	  content="2022/2/6 前端主要是面向需求，后端数据比较大的时候，一般要求开发慢，架构要大家一起选择,考虑方法重复调用;后端数据比较小的时候，一般要求开发快，内容分配自己选择,不考虑方法重复调用">
+<meta charset="utf-8">
+<title>找工作怎样选领导？</title>
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/css/bootstrap.min.css" charset="utf-8">
+<link rel="stylesheet" href="./form.css" charset="utf-8">
+<script type="text/javascript" src="./echarts.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: #f7f7f7">
+
+<div class="row clearfix" style="background-color:white;margin:0 auto;border-bottom:1px solid #e4e4e4">
+		<div class="col-md-12 column" >
+			<div class="page-header" style="text-align: center">
+				<h1>
+					找工作怎样选领导？
+				</h1>
+			</div>
+		</div>
+	</div>
+<div class="container" style="background-color: #f7f7f7;margin-top: 20px">
+	<form action="" onsubmit=" return mysubmit(this)">
+	<div class="row clearfix" style="max-width: 800px;background-color:white;margin:0 auto 20px auto;border-radius: 5px;box-shadow: 0px 4px 7px 1px #e4e4e4">
+		<div class="list-group col-md-6 col-xs-12 column" style="margin-top: 20px;padding-left: 15px"><p>面试时问<span>领导</span>怎样对下属</p>
+			<label for="btn1_1" class="list-group-item" ><input  type="radio" id="btn1_1" name="btn1" value="0"><span><span></span></span> 有错误不去找出原因</input></label>
+			<label for="btn1_2" class="list-group-item" ><input  type="radio" id="btn1_2" name="btn1" value="1"><span><span></span></span> 有错误马上找出原因</input></label>
+			<label for="btn1_3" class="list-group-item" ><input  type="radio" id="btn1_3" name="btn1" value="2"><span><span></span></span> 有错误马上找出原因并改正</input></label>
+		</div>
+		<div class="list-group col-md-6 col-xs-12 column" style="margin-top: 20px;padding-left: 15px"><p>工作时<span>同事</span>对你的行为</p>
+			<label for="btn2_1" class="list-group-item" ><input  type="radio" id="btn2_1" name="btn2" value="0"><span><span></span></span> 无法无天</input></label>
+			<label for="btn2_2" class="list-group-item" ><input  type="radio" id="btn2_2" name="btn2" value="1"><span><span></span></span> 保持距离</input></label>
+			<label for="btn2_3" class="list-group-item" ><input  type="radio" id="btn2_3" name="btn2" value="2"><span><span></span></span> 保持距离并主动承担任务</input></label>
+		</div>
+		<div class="list-group col-md-6 col-xs-12 column" style="margin-top: 20px;padding-left: 15px"><p>领导与你的同事的<span>关系</span></p>
+			<label for="btn3_1" class="list-group-item" ><input  type="radio" id="btn3_1" name="btn3" value="0"><span><span></span></span> 领导对你相对其他下属远</input></label>
+			<label for="btn3_2" class="list-group-item" ><input  type="radio" id="btn3_2" name="btn3" value="1"><span><span></span></span> 同样距离</input></label>
+			<label for="btn3_3" class="list-group-item" ><input  type="radio" id="btn3_3" name="btn3" value="2"><span><span></span></span> 同样距离并且经常能看到</input></label>
+		</div>
+		<div class="list-group col-md-6 col-xs-12 column" style="margin-top: 20px;padding-left: 15px"><p>大家共同遵守的<span>制度<span></p>
+			<label for="btn4_1" class="list-group-item" ><input  type="radio" id="btn4_1" name="btn4" value="0"><span><span></span></span> 不完善不修改</input></label>
+			<label for="btn4_2" class="list-group-item" ><input  type="radio" id="btn4_2" name="btn4" value="1"><span><span></span></span> 不完善可持续修改</input></label>
+			<label for="btn4_3" class="list-group-item" ><input  type="radio" id="btn4_3" name="btn4" value="2"><span><span></span></span> 完善无需修改</input></label>
+		</div>
+		<div class=" col-md-12 column col-xs-12" style="margin: 40px 0 40px 0;">
+		<input type="submit" class="btn btn-default btn-block"></input>
+		</div>
+
+
+	</div></form>
+	<div class="row clearfix" id="result" style="max-width: 800px;background-color:white;margin:0 auto 20px auto;border-radius: 5px;box-shadow: 0px 4px 7px 1px #e4e4e4;padding-bottom: 20px">
+	<div id="chart" class="col-md-12 col-xs-12 column"  style="width:100%;min-height:300px;margin-top: 20px"></div>
+		<div class="col-md-8 col-xs-12 column">
+			<h2>
+				结果
+			</h2>
+			<p id="suggestion">
+
+			</p>
+			<p>
+				<a id="modal-997541" href="#modal-container-997541" role="button" class="btn" data-toggle="modal">详细规则»</a>
+
+			<div class="modal fade" id="modal-container-997541" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title" id="myModalLabel">
+								详细规则
+							</h4>
+						</div>
+						<div class="modal-body">
+							找工作的时候往往希望工作稳定，不会到处跑来跑去。于是就要求：
+							<div>
+								1.领导能看到所有错误；
+							</div>
+							<div>
+								2.同事不会给你找工作范围以外的麻烦；
+							</div>
+							<div>
+								3.上下级关系保持相同，让遇到问题时谁都看不到不公正；
+							</div>
+							<div>
+								4.制度完善，工作中无论遇到什么问题都知道找谁解决，怎么解决。
+							</div>
+							<p> </p>
+							<div>
+								稳定的重要性是：领导&gt;同事&gt;关系&gt;制度。
+							</div>
+							<div>
+								1.领导是稳定最重要的因素，不然领导光说空话欺压下属，不执行制度，谁也没有办法。
+							</div>
+							<div>
+								2.同事第二，是因为下属不按制度办事，只有领导做事，团队也很脆弱，做不出什么东西。
+							</div>
+							<div>
+								3.再次是关系，大家都做事之后，如果谁和谁靠的比较近，那么遇到问题可能就会有别人吃亏，利益归于靠近的人。
+							</div>
+							<div>
+								4.最后是制度，大家都确定分工关系做事之后，才需要知道做什么，从哪里开始做，做给谁去。
+							</div>
+						</div>
+						<div class="modal-footer">
+							 <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+<!--							<button type="button" class="btn btn-primary">保存</button>-->
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			</p>
+		</div>
+		<div class="col-md-4 col-xs-12 column">
+			<img alt="原价2元。现在预约手套，可打8折！" width="200px" src="./glove.png"
+			onclick="alert('预约成功！')"/>
+
+		</div>
+<!--		<div><span id="busuanzi_container_site_uv">-->
+<!--  本站访客数<span id="busuanzi_value_site_uv"></span>人次-->
+<!--</span></div>-->
+	</div>
+</div>
+
+<div class="panel-footer" style="margin-top: 20px">
+	<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+
+
+<span id="busuanzi_container_site_uv">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+</div>
+<script>
+	// const a=parseInt(Math.random()*3)
+	// const b=parseInt(Math.random()*3)
+	// const c=parseInt(Math.random()*3)
+	// const d=parseInt(Math.random()*3)
+
+// 获取表单 https://blog.csdn.net/weixin_42380348/article/details/97284977
+// 	按钮单击可见 https://www.html.cn/qa/javascript/18835.html
+	function mysubmit(form){
+		const e=document.getElementById("suggestion")
+		const result=document.getElementById("result")
+		let formdata=new FormData(form);
+
+		result.style.display="block"
+		window.location.hash = "#result";
+		// console.log(formdata.get('btn1'))
+		// console.log(formdata.get('btn2'))
+		// console.log(formdata.get('btn3'))
+		// console.log(formdata.get('btn4'))
+		// 初始化图表标签
+		var myChart = echarts.init(document.getElementById('chart'));
+		var options={
+			//定义一个标题
+			title:{
+				text:'团队分析'
+			},
+			legend:{
+				data:['团队']
+			},
+			//X轴设置
+			xAxis:{
+				data:['领导','同事','关系','制度']
+			},
+			yAxis:{
+			},
+			//name=legend.data的时候才能显示图例
+			series:[{
+				name:'团队',
+				type:'bar',
+				data:[
+						formdata.get('btn1'),
+						formdata.get('btn2'),
+						formdata.get('btn3'),
+						formdata.get('btn4'),
+				],
+				barMaxWidth: '40px'
+				// itemStyle:{
+				// 	color:'#33bb00'
+				// }
+			}]
+
+		};
+		myChart.setOption(options);
+
+
+		if(formdata.get('btn1')==0){
+			// console.log("早点跑路吧，a不行")
+			e.innerText="早点跑路吧，领导不行"
+		}else if(formdata.get('btn2')==0){
+			// console.log("早点跑路吧，b不行")
+			e.innerText="早点跑路吧，同事不行"
+		}else if(formdata.get('btn3')==0){
+			// console.log("可以考虑，花时间修正c")
+			e.innerText="可以考虑，花时间修正关系"
+		}else if(formdata.get('btn4')==0){
+			// console.log("可以考虑，花时间修正d")
+			e.innerText="可以考虑，花时间修正制度"
+		}else{
+		e.innerText="留下吧，绝世好公司！"
+	}
+	// console.log("result",result.style.display)
+
+		return false;
+	}
+
+</script>
+<script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<!--<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>-->
+</body>
+</html>
+
