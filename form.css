@@ -45,7 +45,7 @@ label input[type="radio"]:checked+span{
 label input[type="radio"]:checked+span>span{
     opacity: 1;
 }
-#result{
+#result,#advertisement{
     display: none;
 }
 /*label input[type="radio"]+span{ border-radius:100%; }*/
