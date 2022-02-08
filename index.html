@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta data-vue-meta="true" itemprop="description" name="description"
-	  content="2022/2/6 前端主要是面向需求，后端数据比较大的时候，一般要求开发慢，架构要大家一起选择,考虑方法重复调用;后端数据比较小的时候，一般要求开发快，内容分配自己选择,不考虑方法重复调用">
+	  content="2022/2/6 本项目站长用Bootstrap和echarts开发，部署在腾讯云服务器。前端主要是面向需求，后端数据比较大的时候，一般要求开发慢，架构要大家一起选择,考虑方法重复调用;后端数据比较小的时候，一般要求开发快，内容分配自己选择,不考虑方法重复调用">
 <meta charset="utf-8">
 <title>找工作怎样选领导？</title>
 <link rel="icon" type="image/x-icon" href="./favicon.ico">
@@ -43,7 +43,7 @@
 			<label for="btn3_2" class="list-group-item" ><input  type="radio" id="btn3_2" name="btn3" value="1"><span><span></span></span> 同样距离</input></label>
 			<label for="btn3_3" class="list-group-item" ><input  type="radio" id="btn3_3" name="btn3" value="2"><span><span></span></span> 同样距离并且经常能看到</input></label>
 		</div>
-		<div class="list-group col-md-6 col-xs-12 column" style="margin-top: 20px;padding-left: 15px"><p>大家共同遵守的<span>制度<span></p>
+		<div class="list-group col-md-6 col-xs-12 column" style="margin-top: 20px;padding-left: 15px"><p>大家共同遵守的<span>制度</span></p>
 			<label for="btn4_1" class="list-group-item" ><input  type="radio" id="btn4_1" name="btn4" value="0"><span><span></span></span> 不完善不修改</input></label>
 			<label for="btn4_2" class="list-group-item" ><input  type="radio" id="btn4_2" name="btn4" value="1"><span><span></span></span> 不完善可持续修改</input></label>
 			<label for="btn4_3" class="list-group-item" ><input  type="radio" id="btn4_3" name="btn4" value="2"><span><span></span></span> 完善无需修改</input></label>
@@ -127,17 +127,13 @@
 <!--  本站访客数<span id="busuanzi_value_site_uv"></span>人次-->
 <!--</span></div>-->
 	</div>
+	<div class="row clearfix" id="advertisement" style="max-width: 800px;background-color:white;margin:0 auto 20px auto;border-radius: 5px;box-shadow: 0px 4px 7px 1px #e4e4e4;padding: 20px 15px;text-align: center">
+		<p>欢迎关注公众号获取最新发货信息</p>
+	<img src="./gonghzonghao.jpg" alt="" width="100px"></div>
 </div>
 
-<div class="panel-footer" style="margin-top: 20px">
-	<span id="busuanzi_container_site_pv">
-    本站总访问量<span id="busuanzi_value_site_pv"></span>次
-</span>
-
-
-<span id="busuanzi_container_site_uv">
-  本站访客数<span id="busuanzi_value_site_uv"></span>人次
-</span>
+<div class="panel-footer" style="padding: 20px 15px 20px 15px;text-align: center">
+	@copyright allCertain All Rights Reserved.
 </div>
 <script>
 	// const a=parseInt(Math.random()*3)
@@ -150,9 +146,11 @@
 	function mysubmit(form){
 		const e=document.getElementById("suggestion")
 		const result=document.getElementById("result")
+		const advertisement=document.getElementById("advertisement")
 		let formdata=new FormData(form);
 
 		result.style.display="block"
+		advertisement.style.display="block"
 		window.location.hash = "#result";
 		// console.log(formdata.get('btn1'))
 		// console.log(formdata.get('btn2'))
@@ -215,9 +213,6 @@
 	}
 
 </script>
-<script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-<!--<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>-->
 </body>
 </html>
 
